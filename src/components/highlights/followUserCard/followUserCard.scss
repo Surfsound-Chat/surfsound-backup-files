@@ -1,0 +1,40 @@
+@import "../../../sassStyles/global";
+
+.user_card {
+    min-height: 4.7rem;
+    max-height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border: 1.8px solid $blue-1;
+
+    .user-details {
+        gap: 0.5rem;
+
+        span {
+
+            .user-title {
+                color: $textColor;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            p {
+                color: $textLight1Color;
+                font-size: 13px;
+            }
+        }
+    }
+    .follow-btn {
+        background-color: $blue-7;
+        background-image: $primaryGradient;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        font-family: inherit;
+        border-radius: 3rem;
+        margin-top: 5px;
+
+    }
+
+}

@@ -1,0 +1,64 @@
+ @import "../../sassStyles/global";
+
+ .replies{
+     gap: 7px;
+     justify-content: end;
+     margin-bottom: 10px;
+    &__text-container{
+         background-color:$borderColor;
+         width:85%;
+         border-radius: 3px;
+         gap: 2px;
+         h4 {
+            color: $textColor;
+            font-size: 0.91rem;
+        }
+
+        .comment_edit{
+            margin-left: auto;
+            position: relative;
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            transition: 0.2s;
+            color: $textColor;
+
+            &:hover,
+            &:focus {
+                background-color: $blue-1;
+            }
+            .option-list{
+                position: absolute;
+                border-radius: 2px;
+                top: 1.3rem;
+                left: -5rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.4s;
+                cursor: pointer;
+                background-color: $lightColor;
+                border: 1.7px solid #DBD4D4;
+                li {
+                    gap: 7px;
+                    padding: 4px;
+
+                }
+                &--active{
+                        visibility: visible;
+                        opacity: 1;
+                        transition: 0.4s;
+                }
+            }
+           
+            
+
+        }
+
+        p {
+            color: $textLight1Color;
+            font-size: 0.9rem;
+        }
+
+    }
+
+ }

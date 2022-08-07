@@ -1,0 +1,14 @@
+@import "../../sassStyles/global";
+
+.emojipicker{
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    transition: 0.4s;
+    opacity: 0;
+}
+.active{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.4s;
+}

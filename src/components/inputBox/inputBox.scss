@@ -1,0 +1,19 @@
+@import "../../sassStyles/global";
+.input-group{
+    &__label{
+        color:$textColor;
+        display: block;
+      }
+    &__input{
+        border: none;
+        width: 95%;
+        background-color:$blue-1 ;
+        border-bottom:2px solid $blue-3;
+        font-size: var(--text-sm);
+
+        &:focus{
+            outline: none;
+        }
+    } 
+
+}

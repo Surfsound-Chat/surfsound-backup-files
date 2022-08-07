@@ -1,0 +1,60 @@
+@import "../../sassStyles/global";
+.suggestion-container{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+.user-suggested{
+    font-size: 0.9rem;
+    height: 100%;
+    overflow: hidden;
+    gap: 1rem;
+
+
+    &__title{
+       color:$black
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+
+    @include mdMinBreakPoint {
+       display: none;
+    }
+}
+.search-form {
+    width:19rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    background-color: $blue-1;
+    color: white;
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-size: 1rem;
+        background-color:transparent;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__icon {
+        height: 100%;
+    }
+}
+.user-list{
+    width: 100%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+.nouser{
+    width: 12rem;
+    height: 12rem;
+    text-align: center;
+}

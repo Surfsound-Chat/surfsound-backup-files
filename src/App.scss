@@ -1,0 +1,32 @@
+@import './sassStyles/global';
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  list-style: none;
+  background-color: $lightBg;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.responsive-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pointer{
+  cursor: pointer;
+}

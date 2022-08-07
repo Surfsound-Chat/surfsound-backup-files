@@ -1,0 +1,15 @@
+@import "../../sassStyles/global";
+
+.profile-title{
+    color: $blue-7;
+    font-size: 1.3rem
+}
+.avatar-container{
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.selected-avatar{
+  border: 2px solid $blue-3;
+  border-radius: 50%;
+  filter: brightness(100%);
+}

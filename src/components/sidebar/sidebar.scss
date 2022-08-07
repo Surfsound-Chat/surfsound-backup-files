@@ -1,0 +1,28 @@
+@import "../../sassStyles/global";
+
+.sidebar {
+    
+    .navlink {
+        gap: 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &__title {
+            font-size: 1.1rem;
+
+            @include mdMinBreakPoint {
+                display: none;
+             }
+        }
+        &:hover{
+            background-color: $blue-3;
+            color: white !important;
+        }
+    }
+    @include mdMinBreakPoint {
+        flex-direction: row;
+        padding: 0;
+        background-color: white !important;
+         justify-content: space-between;
+    }
+}

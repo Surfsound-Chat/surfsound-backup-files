@@ -1,0 +1,112 @@
+@import "../../sassStyles/global";
+
+.login-page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+    &__login-title {
+        color: $blue-7;
+    }
+
+    .grid-item1 {
+        background-color: $blue-7;
+        background-image: linear-gradient(to top right, $blue-7, #7e22ce);
+        color: white;
+        position: relative;
+    }
+
+    .grid-item2 {
+        background-color:white;
+    }
+
+    .img-container {
+        width: 28rem;
+        height: 28rem;
+
+        @include smMinBreakPoint {
+            width: 12rem;
+            height: 12rem;
+            top: 0;
+            left: 0;
+            position: relative;
+        }
+    }
+
+    .star {
+        position: absolute;
+    }
+
+    @include smMinBreakPoint {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12rem 1fr;
+    }
+
+}
+.signup-link {
+    color: black;
+    cursor: pointer;
+
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: $blue-7;
+    }
+}
+
+.error-msg {
+    background-color: $errorHighlight;
+    border-radius: 3px;
+}
+
+.auth-form {
+    width: 60%;
+
+    @include smMinBreakPoint {
+        width: 95%;
+    }
+}
+
+.auth-btn-group {
+    width: 95%;
+    text-align: center;
+}
+
+.auth-btn {
+    border: none;
+    background-color: $blue-4;
+    color: white;
+    font-size: var(--text-sm);
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+        background-color: $blue-6;
+    }
+    &:disabled{
+        opacity: 0.5;
+    }
+}
+
+.test-login {
+    text-align: center;
+    color: $blue-7;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.spinner{
+    animation: spin infinite 5s linear;
+}

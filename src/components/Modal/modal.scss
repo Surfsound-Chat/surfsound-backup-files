@@ -1,0 +1,41 @@
+@import "../../sassStyles/global";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(1px);
+  z-index: 2;
+  background-color: rgba(#42474c, 0.7);
+}
+
+.modal-content {
+  border-radius: 6px;
+  position: fixed;
+  width: 30%;
+  background: white;
+  overflow: hidden;
+
+  @include mdMinBreakPoint {
+    width: 80%;
+  }
+
+  @include smMinBreakPoint {
+    width: 90%;
+  }
+
+  &__close-btn {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.4s;
+    right: 5px;
+    top: 5px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+}

@@ -1,0 +1,66 @@
+@import "../../sassStyles/global";
+.main-container {
+    height: 87vh;
+    position: relative;
+    overflow: hidden;
+
+    @include mdMinBreakPoint {
+        margin: 0;
+    }
+}
+
+.main__wrapper,
+.left__wrapper,
+.content__wrapper,
+.right__wrapper {
+    overflow-y: auto;
+}
+
+.left__wrapper::-webkit-scrollbar,
+.content__wrapper::-webkit-scrollbar,
+.right__wrapper::-webkit-scrollbar {
+    display: none;
+  }
+.main__wrapper {
+    flex: 1;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+
+    @include lgMinBreakPoint {
+        padding: 10px;
+     }
+}
+
+.left__wrapper {
+    flex-basis: 15rem;
+    height: fit-content; 
+     
+    @include lgMinBreakPoint {
+       position: fixed;
+       bottom: 0;
+       height: 4rem;
+       width: 100%;
+       overflow: hidden;
+     }
+}
+
+.content__wrapper {
+    flex: 1;
+
+    @include lgMinBreakPoint {
+        width: 100%;
+        height: calc(100% - 4rem);
+     }
+}
+
+.right__wrapper {
+    flex-basis: 21rem;
+    height: 100%;
+    border-radius: 7px;
+
+    @include lgMinBreakPoint {
+       display: none;
+    }
+}
+

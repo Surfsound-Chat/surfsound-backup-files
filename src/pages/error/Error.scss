@@ -1,0 +1,26 @@
+@import "../../sassStyles/global";
+.error-page{
+height: 100vh;
+    &__img{
+       width: 20rem;
+       height: 20rem; 
+    }
+}
+.navigate-btn{
+background-color: $blue-5;
+border: none;
+color: white;
+font-size: 1rem;
+border-radius: 4px;
+}
+.empty-page{
+    &__img{
+        width:13rem;
+        height: 13rem; 
+    }
+    &__text{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $blue-4;
+    }
+}

@@ -1,0 +1,172 @@
+@import "../../sassStyles/global";
+
+.postcard {
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    height: auto;
+    border: 1.7px solid #DBD4D4;
+
+
+    &__header {
+        width: 100%;
+        height: 4rem;
+
+        .leftspan {
+            gap: 10px;
+            width: 100%;
+
+            span {
+
+                h4 {
+                    color: $textColor;
+                }
+
+                p {
+                    color: $textLight1Color;
+                }
+
+            }
+
+        }
+
+        .rightspan {
+            margin-left: auto;
+            position: relative;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            transition: 0.2s;
+            color: $textColor;
+
+            &:hover,
+            &:focus {
+                background-color: $blue-1;
+            }
+
+            &__items {
+                width: 7.5rem;
+                height: fit-content;
+                position: absolute;
+                border-radius: 5px;
+                top: 2rem;
+                left: -6rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.4s;
+                background-color: $lightColor;
+                gap: 7px;
+                cursor: pointer;
+                border: 1.7px solid #DBD4D4;
+
+                li {
+                    gap: 7px;
+                    padding: 6px;
+
+                    &:hover {
+                        background-color: #DBD4D4;
+                    }
+                }
+
+            }
+
+            &__items.active {
+                visibility: visible;
+                opacity: 1;
+                transition: 0.4s;
+            }
+        }
+    }
+
+    &__content {
+        min-height: 4rem;
+        gap: 5px;
+
+
+        .image_content {
+            width: 100%;
+            height: 15rem;
+            border-radius: 5px;
+
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        @include smMinBreakPoint {
+            margin-left: 0px;
+        }
+    }
+
+    &__footer {
+        border-top: 1.7px solid #DBD4D4;
+        height: 100%;
+        margin-top: 10px;
+        background-color: $lightColor;
+
+        .footer-left {
+            gap: 1rem;
+
+            span {
+                cursor: pointer;
+            }
+
+            .count {
+                color: $blue-7;
+                font-size: 0.9rem;
+            }
+        }
+
+        .footer-right {
+            margin-left: auto;
+
+        }
+
+        @include smMinBreakPoint {
+            margin-left: 0;
+        }
+    }
+
+    &__comments {
+        gap: 10px;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+        transform: translateY(-50px);
+
+        &--active {
+            visibility: visible;
+            transform: translateY(2px);
+        }
+
+    }
+
+    .comment_box {
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 3px;
+        border: 1px solid $blue-2;
+
+
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding-left: 7px;
+            font-size: 1rem;
+            background-color: transparent;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+}
+
+.user-detail {
+    gap: 2px;
+}
+
+.post-date {
+    font-size: 12px;
+}
